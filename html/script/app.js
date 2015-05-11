@@ -5,17 +5,17 @@ var app = angular.module('myApp', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){
 	$routeProvider
 		.when('/', {
-			templateUrl : '../partials/home-view.html',
+			templateUrl : '../html/partials/home-view.html',
 			controller : ''
 		}).
 		
 		when('/Candidate', {
-			templateUrl : '../partials/candidate-list.html',
+			templateUrl : '../html/partials/candidate-list.html',
 			controller: 'candidateListController'
 		}).
 		
 		when('/Candidate/:id', {
-			templateUrl : '../partials/candidate-detail.html',
+			templateUrl : '../html/partials/candidate-detail.html',
 			controller : 'candidateDetailsController'
 		}).
 		
@@ -26,7 +26,7 @@ var app = angular.module('myApp', ['ngRoute'])
 		}).
 		
 		when('/EditCandidate/:id', {
-			templateUrl : '../partials/edit-candidate.html',
+			templateUrl : '../html/partials/edit-candidate.html',
 			controller : 'candidateDetailsController'
 		})
 
