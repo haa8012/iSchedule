@@ -1,0 +1,57 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+	  <label>{{candidate.first_name}} {{candidate.last_name}} </label>
+	  <a href="#/EditCandidate/{{candidate.id}}">
+		  <span class="glyphicon glyphicon-pencil right" style="color:white"> Edit</span>
+	  </a>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      
+      <tr>
+        <td><label>Email Address</label></td>
+        <td>{{candidate.email}} </td>
+      </tr>
+      <tr>
+        <td><label>Position</label></td>
+        <td>{{candidate.position}} </td>
+      </tr>
+      <tr>
+        <td><label>Address</label></td>
+        <td>{{candidate.line1}} </td>
+      </tr>
+      
+      <tr>
+        <td><label>City</label></td>
+        <td>{{candidate.city}} </td>
+      </tr>
+      <tr>
+        <td><label>State</label></td>
+        <td>{{candidate.state}} </td>
+      </tr>
+      <tr>
+        <td><label>Zip-code</label></td>
+        <td>{{candidate.zipcode}} </td>
+      </tr>
+    </table>
+    <h3>Interview Info</h3>
+    <table class="table">
+      <tr>
+        <td><label>Interview time</label></td>
+        <td>{{interview.interview_time}} </td>
+      </tr>
+      <tr>
+        <td><label>Interviewer</label></td>
+        <td>{{interview.interviewer}} </td>
+      </tr>
+      <tr>
+        <td><label>Comment</label></td>
+        <td>{{interview.comment}} </td>
+      </tr>
+      <tr>
+        <td><label>Follow Up</label></td>
+        <td>{{interview.result}} </td>
+      </tr>
+    </table>
+  </div>
+</div>

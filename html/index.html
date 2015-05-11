@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" >
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title title-dirrective></title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="script/app.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top" id="header">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="#/">iSchedule</a>
+				    </div>
+				
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li class="active"><a href="#/">Home <span class="sr-only">(current)</span></a></li>
+				        <li class="red"><a href="#/Candidate"><span>Candidates</span></a></li>
+				      </ul>
+				      
+				      <ul class="nav navbar-nav navbar-right">
+				        <div class="right">
+					<p>
+						Welcome <a href="#"><strong>Administrator</strong></a> | 
+						<a href="#">Help</a> |
+						<a href="#">Profile Settings</a> |
+						<a href="#">Logout</a>
+					</p>
+				</div>
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+</nav>
+	<!-- Header -->
+	<!-- End Header -->
+	
+	
+	
+	<!-- Content -->
+    <div class="container">
+		<div class="jumbotron"> 
+			<div class="row">
+            
+            <div class="col-sm-8">
+                <div ng-view></div>
+            </div>
+			<div class="col-sm-4">
+				<div class="row">
+					<div class="panel panel-primary">
+					  <div class="panel-heading">Upcoming Interview</div>
+					  <div class="panel-body">
+					    Panel content
+					  </div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> New Comment
+                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> 3 New Followers
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> Server Rebooted
+                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> Server Crashed!
+                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> Server Not Responding
+                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> New Order Placed
+                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                </a>
+                                <a href="" class="list-group-item">
+                                    <i class="glyphicon glyphicon-flag"></i> Payment Received
+                                    <span class="pull-right text-muted small"><em>Yesterday</em>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="" class="btn btn-default btn-block">View All Alerts</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+				</div>
+			</div>
+        </div>
+		</div>
+        
+    </div>
+	
+	<!-- End Content -->
+
+
+<!-- Footer -->
+<div id="footer">
+	<p>&copy; Sitename.com. Design by <a href="http://chocotemplates.com">ChocoTemplates.com</a></p>
+</div>
+<!-- End Footer -->
+</body>
+</html>

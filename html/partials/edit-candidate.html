@@ -1,0 +1,88 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+	 <label >Edit Candidate</label>
+	  <a href="#/Candidate/{{candidate.id}}">
+		  <span class="glyphicon glyphicon-ok right" style="color:white"> Save</span>
+	  </a>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+       <tr>
+        <td><label>First Name</label></td>
+        <td>
+                <input class="text-box form-control" ng-model="candidate.first_name" id="SingleManagerView_FirstName" name="SingleManagerView.FirstName" placeholder="First name" type="text" value="" />
+            
+        </td>
+      </tr>
+      <tr>
+        <td><label>Last Name</label></td>
+        <td>
+                <input ng-model="candidate.last_name" class="text-box form-control" id="SingleManagerView_LastName" name="SingleManagerView.LastName" placeholder="Last name" type="text" value="" />
+            
+        </td>
+      </tr>
+      <tr>
+        <td><label>Email Address</label></td>
+        <td>
+            <input ng-model="candidate.email" class="text-box form-control" id="SingleManagerView_EmailAddress" name="SingleManagerView.EmailAddress" placeholder="Emailadress" type="text" value="" />
+            
+        </td>
+      </tr>
+      <tr>
+        <td><label>Position</label></td>
+        <td>
+            <input ng-model="candidate.position" class="text-box form-control" id="SingleManagerView_Position" name="SingleManagerView.Position" placeholder="Position" type="text" value="" />
+            
+        </td>
+      </tr>
+      <tr>
+        <td><label>Address</label></td>
+        <td>
+                <input ng-model="candidate.line1" class="text-box2 form-control" id="SingleManagerView_Line1" name="SingleManagerView.Line1" placeholder="123 Main st" type="text" value="" />
+            
+        </td>
+      </tr>
+      
+      <tr>
+        <td><label>City</label></td>
+        <td>
+                <input ng-model="candidate.city" class="text-box form-control" id="SingleManagerView_City" name="SingleManagerView.City" placeholder="City" type="text" value="" />
+            
+        </td>
+      </tr>
+      <tr>
+        <td><label>State</label></td>
+        <td>
+                <input ng-model="candidate.state" class="text-box form-control" id="SingleManagerView_State" name="SingleManagerView.State" placeholder="State" type="text" value="" />
+            
+        </td>
+      </tr>
+      <tr>
+        <td><label>Zip-code</label></td>
+        <td>
+                <input ng-model="candidate.zipcode" class="text-box form-control" data-val="true" data-val-number="The field Zipcode must be a number." id="SingleManagerView_Zipcode" name="SingleManagerView.Zipcode" placeholder="Zip code" type="text" value="" />
+            
+        </td>
+      </tr>
+    </table>
+    <h3>Interview Info</h3>
+    <table class="table">
+      <tr>
+        <td><label>Interview time</label></td>
+        <td><input class="text-box form-control" type="text" ng-model="interview.interview_time"/> </td>
+      </tr>
+      <tr>
+        <td><label>Interviewer</label></td>
+        <td><input class="text-box form-control" type="text" ng-model="interview.interviewer"></input> </td>
+      </tr>
+      <tr>
+        <td><label>Comment</label></td>
+        <td><textarea class="text-box form-control" cols="5" rows="5" ng-model="interview.comment"></textarea> </td>
+      </tr>
+      <tr>
+        <td><label>Follow Up</label></td>
+        <td>{{interview.result}} </td>
+      </tr>
+    </table>
+  </div>
+</div>
