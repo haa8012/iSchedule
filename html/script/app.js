@@ -75,7 +75,7 @@ var app = angular.module('myApp', ['ngRoute'])
     var CandidatePerPage = [];
 	$.ajax({
 		async : false,
-		url : '..html/JSON/Candidate.json',
+		url : '../html/JSON/Candidate.json',
 		success : function(data){
 			Candidate = data;
 		}
