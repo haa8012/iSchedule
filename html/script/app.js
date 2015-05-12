@@ -252,7 +252,7 @@ $(function () {
         series:
 		 [
 			 {
-				 classname : 'all-candidate',
+				 className : 'all-candidate',
 				 data : [1, 5, 10, 0, 5, 12, 6, 6, 1, 10, 3, 5]
 			 },
 			 {
