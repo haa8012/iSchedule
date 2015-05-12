@@ -1,7 +1,7 @@
 /// <reference path="../typings/angularjs/angular.d.ts"/>
 /// <reference path="../typings/jquery/jquery.d.ts"/>
 
-var path = "../";
+var path = "../html/";
 var app = angular.module('myApp', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider){
