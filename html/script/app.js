@@ -7,30 +7,17 @@ var app = angular.module('myApp', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){
 	$routeProvider
 		.when('/', {
-<<<<<<< HEAD
-			templateUrl : '../html//partials/home-view.html',
-			controller : ''
-		}).
-		
-		when('/Candidate', {
-			templateUrl : '../html/partials/candidate-list.html',
-=======
 			templateUrl : path + 'partials/home-view.html',
 			controller : 'homeController'
 		}).
 		
 		when('/Candidate', {
 			templateUrl : path + 'partials/candidate-list.html',
->>>>>>> master
 			controller: 'candidateListController'
 		}).
 		
 		when('/Candidate/:id', {
-<<<<<<< HEAD
-			templateUrl : '../html/partials/candidate-detail.html',
-=======
 			templateUrl : path + 'partials/candidate-detail.html',
->>>>>>> master
 			controller : 'candidateDetailsController'
 		}).
 		
@@ -41,11 +28,7 @@ var app = angular.module('myApp', ['ngRoute'])
 		}).
 		
 		when('/EditCandidate/:id', {
-<<<<<<< HEAD
-			templateUrl : '../html/partials/edit-candidate.html',
-=======
 			templateUrl : path + 'partials/edit-candidate.html',
->>>>>>> master
 			controller : 'candidateDetailsController'
 		})
 
