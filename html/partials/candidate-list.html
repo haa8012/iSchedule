@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-animate="'animate'" ng-repeat="c in candidateList | filter:src">
+        <tr ng-repeat="c in candidateList | filter:src" class="candidate-listing">
             <td class="col-md-4">
                 <a href="#/Candidate/{{c.id}}">
                 {{c.first_name}} {{c.last_name}}</a></td>

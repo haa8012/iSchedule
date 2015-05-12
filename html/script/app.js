@@ -2,7 +2,7 @@
 /// <reference path="../typings/jquery/jquery.d.ts"/>
 
 var path = "../html/";
-var app = angular.module('myApp', ['ngRoute'])
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate'])
 
 .config(['$routeProvider', function($routeProvider){
 	$routeProvider
@@ -244,7 +244,8 @@ var app = angular.module('myApp', ['ngRoute'])
 	return {
 		template : "Tittle"
 	}
-});
+})
+
 
 $(function () {
     var chart = new Chartist.Line('.ct-chart', {
