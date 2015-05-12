@@ -1,8 +1,9 @@
 * { padding:0; margin:0; outline:0; }
 body {
-	font-family: Verdana, Arial, sans-serif;
-	font-size:12px;
-	line-height:20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
 	color:#666;
 
 }
@@ -190,15 +191,14 @@ ANIMATION
     color: #b52b27;
 }
 
-.all-candidate{
-    color:  #364f86;
-    background-color: #364f86;
+.ct-chart .ct-series.ct-series-c .ct-bar, .ct-chart .ct-series.ct-series-c .ct-line, .ct-chart .ct-series.ct-series-c .ct-point, .ct-chart .ct-series.ct-series-c .ct-slice.ct-donut {
+   stroke:  #364f86 !important;
 }
 
-.success-candidate{
-    color: #5cb85c;
+.ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
+  stroke: #5cb85c;
 }
 
-.fail-candidate{
-    color: #d9534f;
+ct-chart .ct-series.ct-series-a .ct-bar, .ct-chart .ct-series.ct-series-a .ct-line, .ct-chart .ct-series.ct-series-a .ct-point, .ct-chart .ct-series.ct-series-a .ct-slice.ct-donut{
+    stroke: #d9534f !important;
 }
