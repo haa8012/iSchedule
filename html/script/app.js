@@ -256,12 +256,12 @@ $(function () {
 				 data : [1, 5, 10, 0, 5, 12, 6, 6, 1, 10, 3, 5]
 			 },
 			 {
-				 classname : 'success-candidate',
+				 className : 'success-candidate',
 				 data : [10, 15, 7, 1, 2, 7, 11, 3, 2, 7, 6]
 			 },
 			 
 			 {
-				 classname : 'fail-candidate',
+				 className : 'fail-candidate',
 				 data :  [3, 12, 5, 3, 6, 12, 4, 8, 10, 2, 16, 12]
 			 }
           

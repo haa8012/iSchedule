@@ -194,3 +194,11 @@ ANIMATION
     color:  #364f86;
     background-color: #364f86;
 }
+
+.success-candidate{
+    color: #5cb85c;
+}
+
+.fail-candidate{
+    color: #d9534f;
+}
