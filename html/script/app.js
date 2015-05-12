@@ -31,6 +31,10 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate'])
 			templateUrl : path + 'partials/edit-candidate.html',
 			controller : 'candidateDetailsController'
 		})
+		.when('/About', {
+			templateUrl : path + 'partials/about.html',
+			controller : ''
+		})
 
         .otherwise({
             redirectTo : '/'
