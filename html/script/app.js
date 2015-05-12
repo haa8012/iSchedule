@@ -1,14 +1,14 @@
 /// <reference path="../typings/angularjs/angular.d.ts"/>
 /// <reference path="../typings/jquery/jquery.d.ts"/>
 
-var path = "../";
+var path = "../html/";
 var app = angular.module('myApp', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider){
 	$routeProvider
 		.when('/', {
 			templateUrl : path + 'partials/home-view.html',
-			controller : ''
+			controller : 'homeController'
 		}).
 		
 		when('/Candidate', {
@@ -87,6 +87,39 @@ var app = angular.module('myApp', ['ngRoute'])
 		console.log(filterBySuccess)
 }])
 
+.controller('homeController', ['$scope','CandidateFactory', function($scope, CandidateFactory)
+{
+	
+	///Angular Function that check when the partial view is loaded
+    ///Then you can do DOM Manipulation
+
+    $scope.candidateList = CandidateFactory.getInitial();
+	$scope.$on('$viewContentLoaded', function(){
+				
+		var chart = new Chartist.Line('.ct-chart', {
+		  labels: ['jan', 'feb', 'march', 'apr', 'may', 'june', 'july', 'aug', 'sept', 'oct', 'nov', 'dec'],
+		  series: [
+		    [1, 5, 10, 0, 5, 12,6, 6, 1,10,3,5],
+		    [10, 15, 7, 1, 2, 7, 11, 3, 2, 7, 6],
+            [3,12,5,3,6,12,4,8,10,2,16,12]
+		  ]
+		}, {
+		  // Remove this configuration to see that chart rendered with cardinal spline interpolation
+		  // Sometimes, on large jumps in data values, it's better to use simple smoothing.
+		  lineSmooth: Chartist.Interpolation.simple({
+		    divisor: 2
+		  }),
+		  fullWidth: true,
+		  chartPadding: {
+		    right: 20
+		  },
+		  low: 0
+		});
+	})
+	
+	///
+}])
+
 //CANDIDATE FACTORY
 .factory('CandidateFactory', ['InterviewFactory', function(InterviewFactory){
 	var numberPerPage = 20;
@@ -94,6 +127,7 @@ var app = angular.module('myApp', ['ngRoute'])
 	
 	var Candidate = [];	
 	var CandidateFilter = [];
+	var InitialCandidate = [];
 	
 	var InterviewList = InterviewFactory.getList();
 	
@@ -140,6 +174,14 @@ var app = angular.module('myApp', ['ngRoute'])
 		console.log(numberPerPage);
 	};
 	getMore();
+
+	getInitial = function () {
+	    for (var i = 0; i < 5; i++) {
+	        InitialCandidate.push(Candidate[i]);
+	    }
+	}
+
+	getInitial();
 	return{
 		getList : function(){
 			return CandidatePerPage;
@@ -168,6 +210,9 @@ var app = angular.module('myApp', ['ngRoute'])
 			filter(value);
 			return CandidateFilter;
 			///
+		},
+		getInitial: function () {
+		    return InitialCandidate;
 		}
 	}
 }])
@@ -201,18 +246,24 @@ var app = angular.module('myApp', ['ngRoute'])
 	}
 });
 
-$(function(){
-	var data = {
-  // A labels array that can contain any sort of values
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-  // Our series array that contains series objects or in this case series data arrays
-  series: [
-    [5, 2, 4, 2, 0]
-  ]
-};
-
-// Create a new line chart object where as first parameter we pass in a selector
-// that is resolving to our chart container element. The Second parameter
-// is the actual data object.
-new Chartist.Line('.ct-chart', data);
+$(function () {
+    var chart = new Chartist.Line('.ct-chart', {
+        labels: ['jan', 'feb', 'march', 'apr', 'may', 'june', 'july', 'aug', 'sept', 'oct', 'nov', 'dec'],
+        series: [
+          [1, 5, 10, 0, 5, 12, 6, 6, 1, 10, 3, 5],
+          [10, 15, 7, 1, 2, 7, 11, 3, 2, 7, 6],
+          [3, 12, 5, 3, 6, 12, 4, 8, 10, 2, 16, 12]
+        ]
+    }, {
+        // Remove this configuration to see that chart rendered with cardinal spline interpolation
+        // Sometimes, on large jumps in data values, it's better to use simple smoothing.
+        lineSmooth: Chartist.Interpolation.simple({
+            divisor: 2
+        }),
+        fullWidth: true,
+        chartPadding: {
+            right: 20
+        },
+        low: 0
+    });
 })
