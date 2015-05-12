@@ -249,11 +249,25 @@ var app = angular.module('myApp', ['ngRoute'])
 $(function () {
     var chart = new Chartist.Line('.ct-chart', {
         labels: ['jan', 'feb', 'march', 'apr', 'may', 'june', 'july', 'aug', 'sept', 'oct', 'nov', 'dec'],
-        series: [
-          [1, 5, 10, 0, 5, 12, 6, 6, 1, 10, 3, 5],
-          [10, 15, 7, 1, 2, 7, 11, 3, 2, 7, 6],
-          [3, 12, 5, 3, 6, 12, 4, 8, 10, 2, 16, 12]
+        series:
+		 [
+			 {
+				 classname : 'all-candidate',
+				 data : [1, 5, 10, 0, 5, 12, 6, 6, 1, 10, 3, 5]
+			 },
+			 {
+				 classname : 'success-candidate',
+				 data : [10, 15, 7, 1, 2, 7, 11, 3, 2, 7, 6]
+			 },
+			 
+			 {
+				 classname : 'fail-candidate',
+				 data :  [3, 12, 5, 3, 6, 12, 4, 8, 10, 2, 16, 12]
+			 }
+          
+		  
         ]
+	
     }, {
         // Remove this configuration to see that chart rendered with cardinal spline interpolation
         // Sometimes, on large jumps in data values, it's better to use simple smoothing.
