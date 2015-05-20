@@ -13,15 +13,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="c in candidateList | filter:src" class="candidate-listing">
+        <tr ng-repeat="c in candidateList | filter:src">
             <td class="col-md-4">
                 <a href="#/Candidate/{{c.id}}">
-                {{c.first_name}} {{c.last_name}}</a></td>
+                    {{c.first_name}} {{c.last_name}}
+                </a>
+            </td>
             <td>{{c.position}}</td>
-            <td><a href="#/EditCandidate/{{c.id}}">
-                <span class="glyphicon glyphicon-pencil"></span>
-             </a></td>
-            <td><a href="" ng-click="delete($index)"><span class="glyphicon glyphicon-remove"></span></a></td>            
+            <td>
+                <a href="#/EditCandidate/{{c.id}}">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+            </td>
+            <td><a href="" ng-click="delete($index)"><span class="glyphicon glyphicon-remove"></span></a></td>
         </tr>
     </tbody>
 </table>
